@@ -1,0 +1,52 @@
+Arguments: 
+  /usr/local/Cellar/node/13.3.0/bin/node /usr/local/Cellar/yarn/1.21.1/libexec/bin/yarn.js add pylint --save dev
+
+PATH: 
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/anaconda3/bin:/opt/anaconda3/condabin
+
+Yarn version: 
+  1.21.1
+
+Node version: 
+  13.3.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/pylint: Not found
+      at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.21.1/libexec/lib/cli.js:66947:18)
+      at Request.self.callback (/usr/local/Cellar/yarn/1.21.1/libexec/lib/cli.js:140665:22)
+      at Request.emit (events.js:219:5)
+      at Request.<anonymous> (/usr/local/Cellar/yarn/1.21.1/libexec/lib/cli.js:141637:10)
+      at Request.emit (events.js:219:5)
+      at IncomingMessage.<anonymous> (/usr/local/Cellar/yarn/1.21.1/libexec/lib/cli.js:141559:12)
+      at Object.onceWrapper (events.js:308:28)
+      at IncomingMessage.emit (events.js:224:7)
+      at endReadableNT (_stream_readable.js:1206:12)
+      at processTicksAndRejections (internal/process/task_queues.js:84:21)
+
+npm manifest: 
+  {
+    "name": "universal-aws-domain",
+    "version": "1.0.0",
+    "description": "API Gateway uses universal domain",
+    "main": "index.js",
+    "author": "Tri Luong",
+    "license": "MIT",
+    "scripts": {
+      "sls": "node_modules/.bin/sls",
+      "test": "echo 'No test for this service.'",
+      "lint": "node_modules/.bin/tslint --project . ",
+      "deploy-dev": "node_modules/.bin/sls deploy --stage dev",
+      "deploy-qa": "node_modules/.bin/sls deploy --stage qa",
+      "deploy-ba": "node_modules/.bin/sls deploy --stage ba",
+      "deploy-prod": "node_modules/.bin/sls deploy --stage prod"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

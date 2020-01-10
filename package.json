@@ -1,0 +1,21 @@
+{
+  "name": "universal-aws-domain",
+  "version": "1.0.0",
+  "description": "API Gateway uses universal domain",
+  "main": "index.js",
+  "author": "Tri Luong",
+  "license": "MIT",
+  "scripts": {
+    "sls": "node_modules/.bin/sls",
+    "test": "echo 'No test for this service.'",
+    "lint": "node_modules/.bin/tslint --project . ",
+    "deploy-dev": "node_modules/.bin/sls deploy --stage dev",
+    "deploy-qa": "node_modules/.bin/sls deploy --stage qa",
+    "deploy-ba": "node_modules/.bin/sls deploy --stage ba",
+    "deploy-prod": "node_modules/.bin/sls deploy --stage prod"
+  },
+  "dependencies": {
+    "serverless": "^1.60.5",
+    "serverless-domain-manager": "^3.3.0"
+  }
+}

@@ -1,0 +1,33 @@
+service: universal-aws-domain
+
+provider:
+  name: aws
+  runtime: python3.7
+  stage: ${opt:stage, 'dev'} # Set the default stage used. Default is dev
+  region: us-east-1
+
+plugins:
+  - serverless-domain-manager
+
+custom:
+  customDomain:
+    domainName: homeapi.mydomain.com
+    basePath: ${self:provider.stage}
+    stage: ${self:provider.stage}
+    certificateName: "*.mydomain.com"
+    createRoute53Record: true
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          path: hello
+          method: get
+
+  greetings:
+    handler: handler.greetings
+    events:
+      - http:
+          path: greetings
+          method: get
